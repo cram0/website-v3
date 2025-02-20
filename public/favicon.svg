@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs" width="1000" height="1000"><style>
+    #light-icon {
+      display: inline;
+    }
+    #dark-icon {
+      display: none;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      #light-icon {
+        display: none;
+      }
+      #dark-icon {
+        display: inline;
+      }
+    }
+  </style><g id="light-icon"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs" width="1000" height="1000"><g clip-path="url(#SvgjsClipPath1197)"><rect width="1000" height="1000" fill="#000000"></rect><g transform="matrix(16.666666666666668,0,0,16.666666666666668,100,100)"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs" width="48px" height="48px"><svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px" fill="#fff085"><path d="m647-496-67-123 67-123h140l67 123-67 123H647ZM410-356l-67-124 67-124h140l67 124-67 124H410Zm0-278-67-123 67-123h140l67 123-67 123H410ZM173-496l-67-123 67-123h140l67 123-67 123H173Zm0 278-67-123 67-123h140l67 123-67 123H173ZM411-80l-68-123 67-123h140l67 123-67 123H411Zm236-138-67-123 67-123h140l67 123-67 123H647Z"></path></svg></svg></g></g><defs><clipPath id="SvgjsClipPath1197"><rect width="1000" height="1000" x="0" y="0" rx="350" ry="350"></rect></clipPath></defs></svg></g><g id="dark-icon"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs" width="1000" height="1000"><g><g transform="matrix(20.833333333333332,0,0,20.833333333333332,0,0)"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs" width="48px" height="48px"><svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px" fill="#fff085"><path d="m647-496-67-123 67-123h140l67 123-67 123H647ZM410-356l-67-124 67-124h140l67 124-67 124H410Zm0-278-67-123 67-123h140l67 123-67 123H410ZM173-496l-67-123 67-123h140l67 123-67 123H173Zm0 278-67-123 67-123h140l67 123-67 123H173ZM411-80l-68-123 67-123h140l67 123-67 123H411Zm236-138-67-123 67-123h140l67 123-67 123H647Z"></path></svg></svg></g></g></svg></g></svg>
