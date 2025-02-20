@@ -56,10 +56,10 @@ export default function Navbar() {
   return (
     <div className="font-oxanium sticky top-0 z-10">
       <nav
-        className="flex h-16 flex-row items-center justify-between bg-gradient-to-b from-black via-black to-transparent px-8"
+        className={`flex h-16 flex-row items-center justify-between ${menuOpen ? "bg-black" : "bg-gradient-to-b from-black via-black to-transparent"} px-8`}
         role="navigation"
       >
-        <NavLink to="/" className="font-navbar tracking-wide">
+        <NavLink to="/" className="font-navbar">
           Julien Augugliaro
         </NavLink>
         <ul className="hidden items-center *:h-16 *:px-3 *:hover:bg-yellow-200 *:hover:text-black *:active:bg-black *:active:text-yellow-200 sm:flex">
@@ -74,11 +74,11 @@ export default function Navbar() {
             </NavLink>
           ))}
         </ul>
-        <div className="hover:cursor-pointer sm:hidden" onClick={toggleMenu}>
+        <button className="hover:cursor-pointer sm:hidden" onClick={toggleMenu}>
           <IconContext.Provider value={{ color: "fff085", size: "16px" }}>
             {menuOpen ? <MdHive /> : <MdOutlineHive />}
           </IconContext.Provider>
-        </div>
+        </button>
       </nav>
       {/* Mobile Menu */}
       {
