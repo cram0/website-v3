@@ -12,19 +12,24 @@ export default function Background() {
       const blobs = blobsRef.current?.children;
 
       if (blobs) {
-        gsap.to(blobs, {
-          duration: 20,
-          stagger: {
-            each: 0.1,
-            from: "random",
+        gsap.fromTo(
+          blobs,
+          {
+            top: () => gsap.utils.random(0, window.innerHeight, 1),
+            left: 0,
           },
-          top: () => gsap.utils.random(0, window.innerHeight, 1),
-          left: () => gsap.utils.random(0, window.innerWidth, 1),
-          yoyo: true,
-          ease: "circ.inOut",
-          repeat: -1,
-          repeatRefresh: true,
-        });
+          {
+            duration: 20,
+            stagger: {
+              each: 0.1,
+              from: "edges",
+            },
+            left: window.innerWidth,
+            yoyo: true,
+            ease: "circ.inOut",
+            repeat: -1,
+          },
+        );
       }
     },
     { scope: blobsRef },
@@ -55,11 +60,7 @@ export default function Background() {
         Array.from({ length: 5 }).map((_, i) => (
           <div
             key={i}
-            className={`absolute h-48 w-48 rounded-full bg-yellow-200/50`}
-            style={{
-              top: `${Math.random() * 100}vh`,
-              left: `${Math.random() * 100}vw`,
-            }}
+            className={`absolute h-24 w-24 rounded-full bg-yellow-200`}
           ></div>
         ))
       }

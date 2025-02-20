@@ -63,7 +63,7 @@ export default function Home() {
       <div className="relative col-span-1 overflow-hidden rounded-xl bg-yellow-200/10 backdrop-blur-lg sm:col-span-2">
         <div className="flex flex-col sm:flex-row">
           <ImageLoader
-            src="https://i.imgur.com/W12X8iV.jpeg"
+            src="https://i.imgur.com/742P20m.jpeg"
             alt="Me"
             style="h-32 hidden sm:block w-full object-cover sm:h-auto sm:w-64 lg:w-80"
           />
@@ -71,19 +71,22 @@ export default function Home() {
             <div className="mb-4 flex items-center gap-3">
               <PiHandWaving className="hidden text-yellow-200 sm:block" />
               <img
-                src="https://i.imgur.com/W12X8iV.jpeg"
+                src="https://i.imgur.com/742P20m.jpeg"
                 className="size-8 rounded-lg sm:hidden"
+                alt="Me"
               />
               <h1 className="font-oxanium text-2xl font-extralight">
                 Hello there!
               </h1>
             </div>
             <p className="leading-relaxed text-gray-100">
-              I'm Julien, Junior full-stack developer for two years, I also
-              worked as a teaching assistant in a major computer science school
-              for two years. I have also been called upon to join projects in
-              the middle of a final rush and was able to adapt to the companies'
-              needs.
+              I'm Julien, a junior full-stack developer with two years of
+              experience. I've also worked as a teaching assistant at a leading
+              computer science school for two years, where I honed my skills in
+              guiding and supporting students. Additionally, I've been brought
+              into projects during high-pressure final stages, demonstrating my
+              ability to quickly adapt and deliver results that align with
+              company goals.
             </p>
           </div>
         </div>
@@ -104,7 +107,7 @@ export default function Home() {
             Active open-source{" "}
             <a
               href="https://github.com/cram0/sotn-decomp"
-              className="text-yellow-200 hover:underline"
+              className="text-yellow-200 underline"
             >
               contributor
             </a>{" "}

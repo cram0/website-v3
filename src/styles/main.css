@@ -5,7 +5,7 @@
 @import "tailwindcss";
 
 .goo-container {
-  filter: url(#goo) blur(10px);
+  filter: url(#goo);
   width: 100%;
   height: 100%;
   overflow: hidden;
@@ -13,6 +13,7 @@
 
 @font-face {
   font-family: "Travax";
+  font-display: swap;
   src: url("../assets/fonts/Travax.ttf") format("TrueType");
 }
 
