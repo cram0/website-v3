@@ -62,15 +62,18 @@ export default function Navbar() {
         <NavLink to="/" className="">
           Julien Augugliaro
         </NavLink>
-        <div className="hidden sm:block">
-          <ul className="flex items-center gap-8 *:hover:bg-yellow-200 *:hover:text-black *:active:bg-black *:active:text-yellow-200">
-            {menuItems.map((item) => (
-              <NavLink to={item.url} end key={item.name}>
-                {item.name}
-              </NavLink>
-            ))}
-          </ul>
-        </div>
+        <ul className="hidden items-center *:h-16 *:px-3 *:hover:bg-yellow-200 *:hover:text-black *:active:bg-black *:active:text-yellow-200 sm:flex">
+          {menuItems.map((item) => (
+            <NavLink
+              to={item.url}
+              end
+              key={item.name}
+              className={"flex flex-row items-center"}
+            >
+              {item.name}
+            </NavLink>
+          ))}
+        </ul>
         <div className="hover:cursor-pointer sm:hidden" onClick={toggleMenu}>
           <IconContext.Provider value={{ color: "fff085", size: "16px" }}>
             {menuOpen ? <MdHive /> : <MdOutlineHive />}
