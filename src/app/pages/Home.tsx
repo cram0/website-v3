@@ -65,11 +65,15 @@ export default function Home() {
           <ImageLoader
             src="https://i.imgur.com/W12X8iV.jpeg"
             alt="Me"
-            style="h-32 w-full object-cover sm:h-auto sm:w-64 lg:w-80"
+            style="h-32 hidden sm:block w-full object-cover sm:h-auto sm:w-64 lg:w-80"
           />
           <div className="flex flex-1 flex-col justify-center p-6">
             <div className="mb-4 flex items-center gap-3">
-              <PiHandWaving className="text-yellow-200" />
+              <PiHandWaving className="hidden text-yellow-200 sm:block" />
+              <img
+                src="https://i.imgur.com/W12X8iV.jpeg"
+                className="size-8 rounded-lg sm:hidden"
+              />
               <h1 className="font-oxanium text-2xl font-extralight">
                 Hello there!
               </h1>
