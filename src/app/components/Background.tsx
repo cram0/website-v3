@@ -52,10 +52,10 @@ export default function Background() {
       </svg>
       {
         // Background Animation
-        Array.from({ length: 20 }).map((_, i) => (
+        Array.from({ length: 5 }).map((_, i) => (
           <div
             key={i}
-            className={`absolute h-24 w-24 rounded-full bg-yellow-200/50`}
+            className={`absolute h-48 w-48 rounded-full bg-yellow-200/50`}
             style={{
               top: `${Math.random() * 100}vh`,
               left: `${Math.random() * 100}vw`,

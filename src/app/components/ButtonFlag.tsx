@@ -14,7 +14,7 @@ export default function ButtonFlag({
       href={url}
       target="_blank"
       rel="noopener noreferrer"
-      className="group relative flex h-15 flex-row items-center justify-between overflow-hidden rounded-xl text-yellow-200 backdrop-blur-lg transition-all hover:bg-yellow-200/10"
+      className="group relative flex h-15 flex-row items-center justify-between overflow-hidden rounded-xl bg-yellow-200/10 text-yellow-200 transition-all hover:bg-yellow-200/20"
     >
       <img
         src={`https://flagcdn.com/${flag}.svg`}
