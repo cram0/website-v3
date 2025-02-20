@@ -11,8 +11,14 @@
   overflow: hidden;
 }
 
+@font-face {
+  font-family: "Travax";
+  src: url("../assets/fonts/Travax.ttf") format("TrueType");
+}
+
 @theme {
   --font-inter: "Inter", sans-serif;
   --font-oxanium: "Oxanium", serif;
   --font-lato: "Lato", sans-serif;
+  --font-navbar: "Travax", serif;
 }
