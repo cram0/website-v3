@@ -9,7 +9,6 @@ import { PiHandWaving, PiInfo, PiClock } from "react-icons/pi";
 import { gsap } from "gsap";
 import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
-import ImageLoader from "../components/ImageLoader";
 
 // Timezone in Nice, France
 const timezoneFR = "Europe/Paris";
