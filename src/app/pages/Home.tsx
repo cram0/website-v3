@@ -62,17 +62,12 @@ export default function Home() {
       {/* Hero Card */}
       <div className="relative col-span-1 overflow-hidden rounded-xl bg-yellow-200/10 backdrop-blur-lg sm:col-span-2">
         <div className="flex flex-col sm:flex-row">
-          <ImageLoader
-            src="https://i.imgur.com/742P20m.jpeg"
-            alt="Me"
-            style="h-32 hidden sm:block w-full object-cover sm:h-auto sm:w-64 lg:w-80"
-          />
           <div className="flex flex-1 flex-col justify-center p-6">
             <div className="mb-4 flex items-center gap-3">
               <PiHandWaving className="hidden text-yellow-200 sm:block" />
               <img
                 src="https://i.imgur.com/742P20m.jpeg"
-                className="size-8 rounded-lg sm:hidden"
+                className="size-8 rounded-full sm:hidden"
                 alt="Me"
               />
               <h1 className="font-oxanium text-2xl font-extralight">
