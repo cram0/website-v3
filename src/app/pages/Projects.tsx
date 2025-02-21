@@ -58,14 +58,30 @@ function ImageWithLoader({ src, alt }: { src: string; alt: string }) {
 }
 
 export default function Projects() {
-  const projectsRef = useRef<HTMLDivElement>(null);
+  const projectRef = useRef<HTMLDivElement>(null);
+  const projectsRef = useRef<HTMLUListElement>(null);
 
   useGSAP(
     () => {
+      const tl = gsap.timeline();
+      tl.fromTo(
+        projectRef.current,
+        {
+          autoAlpha: 0,
+          y: 50,
+        },
+        {
+          autoAlpha: 1,
+          y: 0,
+          duration: 1,
+          ease: "back.out(1.7)",
+        },
+      );
+
       const projects = projectsRef.current?.children;
 
       if (projects) {
-        gsap.fromTo(
+        tl.fromTo(
           projects,
           {
             autoAlpha: 0,
@@ -78,18 +94,19 @@ export default function Projects() {
             stagger: 0.2,
             ease: "back.out(1.7)",
           },
+          "+0.2",
         );
       }
     },
-    { scope: projectsRef },
+    { scope: projectRef },
   );
 
   return (
-    <div ref={projectsRef}>
-      <div className="col-span-1 flex flex-col gap-2 overflow-hidden rounded-lg bg-yellow-200/10 p-6 sm:col-span-2">
+    <div ref={projectRef}>
+      <div className="col-span-1 flex flex-col gap-6 overflow-hidden rounded-lg bg-yellow-200/10 p-6 sm:col-span-2">
         <div className="font-oxanium text-3xl">Projects</div>
 
-        <ul className="flex list-inside flex-col gap-2">
+        <ul ref={projectsRef} className="flex list-inside flex-col gap-2">
           {projects.map((project) => (
             <li key={project.name}>
               <a
