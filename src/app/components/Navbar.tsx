@@ -5,10 +5,6 @@ import { NavLink } from "react-router";
 import { MdHive, MdOutlineHive } from "react-icons/md";
 import { IconContext } from "react-icons";
 
-// GSAP
-import { gsap } from "gsap";
-import { useGSAP } from "@gsap/react";
-
 const menuItems = [
   {
     name: "Home",
