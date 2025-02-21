@@ -32,27 +32,6 @@ export default function Navbar() {
     setMenuOpen((prev) => !prev);
   };
 
-  useGSAP(
-    () => {
-      const menu = menuRef.current;
-
-      if (menu) {
-        gsap.fromTo(
-          menu,
-          {
-            y: -50,
-          },
-          {
-            y: 0,
-            duration: 1,
-            ease: "back.out(1.7)",
-          },
-        );
-      }
-    },
-    { scope: menuRef },
-  );
-
   return (
     <div className="font-oxanium sticky top-0 z-10">
       <nav
@@ -62,7 +41,7 @@ export default function Navbar() {
         <NavLink to="/" className="font-navbar">
           Julien Augugliaro
         </NavLink>
-        <ul className="hidden items-center *:h-16 *:px-3 *:hover:bg-yellow-200 *:hover:text-black *:active:bg-black *:active:text-yellow-200 sm:flex">
+        <ul className="hidden items-center *:h-16 *:px-3 *:italic *:hover:bg-yellow-200 *:hover:text-black *:active:bg-black *:active:text-yellow-200 sm:flex">
           {menuItems.map((item) => (
             <NavLink
               to={item.url}
@@ -86,7 +65,7 @@ export default function Navbar() {
           className={`bg-yellow-200 text-black md:hidden ${menuOpen ? "block" : "hidden"}`}
           ref={menuRef}
         >
-          <ul className="flex flex-col *:px-4 *:py-2 *:hover:bg-black *:hover:text-yellow-200 *:active:bg-yellow-200 *:active:text-black">
+          <ul className="flex flex-col *:px-4 *:py-2 *:italic *:hover:bg-black *:hover:text-yellow-200 *:active:bg-yellow-200 *:active:text-black">
             {menuItems.map((item) => (
               <NavLink to={item.url} end key={item.name}>
                 {item.name}

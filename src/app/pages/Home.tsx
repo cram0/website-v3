@@ -55,31 +55,23 @@ export default function Home() {
   );
 
   return (
-    <div
-      className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:gap-6"
-      ref={cardsRef}
-    >
+    <div className="grid grid-cols-1 gap-4 sm:grid-cols-2" ref={cardsRef}>
       {/* Hero Card */}
       <div className="relative col-span-1 overflow-hidden rounded-xl bg-yellow-200/10 backdrop-blur-lg sm:col-span-2">
         <div className="flex flex-col sm:flex-row">
-          <ImageLoader
-            src="https://i.imgur.com/742P20m.jpeg"
-            alt="Me"
-            style="h-32 hidden sm:block w-full object-cover sm:h-auto sm:w-64 lg:w-80"
-          />
           <div className="flex flex-1 flex-col justify-center p-6">
             <div className="mb-4 flex items-center gap-3">
               <PiHandWaving className="hidden text-yellow-200 sm:block" />
               <img
                 src="https://i.imgur.com/742P20m.jpeg"
-                className="size-8 rounded-lg sm:hidden"
+                className="size-8 rounded-full sm:hidden"
                 alt="Me"
               />
               <h1 className="font-oxanium text-2xl font-extralight">
                 Hello there!
               </h1>
             </div>
-            <p className="leading-relaxed text-gray-100">
+            <p className="text-gray-200">
               I'm Julien, a junior full-stack developer with two years of
               experience. I've also worked as a teaching assistant at a leading
               computer science school for two years, where I honed my skills in
@@ -98,7 +90,7 @@ export default function Home() {
           <PiInfo className="h-5 w-5 text-yellow-200" />
           <h2 className="font-oxanium text-xl">About Me</h2>
         </div>
-        <div className="flex flex-col text-gray-200">
+        <div className="flex flex-1 flex-col justify-center gap-2 text-gray-200">
           <p>
             Seasoned in diverse projects from small websites to large-scale
             applications.
@@ -132,17 +124,33 @@ export default function Home() {
           <h2 className="font-oxanium text-xl">Current Status</h2>
         </div>
         <div className="flex flex-1 flex-col justify-center">
-          <p className="text-gray-200">Available for freelance projects</p>
+          <p className="text-gray-200">
+            Available for freelance projects, please contact me through{" "}
+            <a
+              href="https://linkedin.com/in/julien-augugliaro"
+              className="text-yellow-200 underline"
+            >
+              LinkedIn
+            </a>{" "}
+            or{" "}
+            <a
+              href="https://www.upwork.com/freelancers/~01ab2f5dbe2efe407b"
+              className="text-yellow-200 underline"
+            >
+              Upwork
+            </a>
+            .
+          </p>
         </div>
       </div>
 
       {/* Timezone Card */}
-      <div className="flex flex-col rounded-xl bg-yellow-200/10 p-6 backdrop-blur-lg">
-        <div className="mb-4 flex items-center gap-3">
+      <div className="flex flex-col gap-3 rounded-xl bg-yellow-200/10 p-6 backdrop-blur-lg">
+        <div className="flex flex-row items-center gap-3">
           <PiClock className="h-5 w-5 text-yellow-200" />
           <h2 className="font-oxanium text-xl">My Timezones</h2>
         </div>
-        <div className="space-y-2 font-mono">
+        <div className="flex flex-1 flex-col justify-center gap-2 font-mono">
           <p className="text-gray-200">
             🇫🇷 Nice: <span className="text-yellow-200">{timeFR}</span>
           </p>

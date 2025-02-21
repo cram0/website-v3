@@ -64,6 +64,17 @@ const jobs = [
   },
 ];
 
+const education = [
+  {
+    title: "Master's Degree in IT",
+    company: "Epitech, Nice",
+    startDate: "September 2019",
+    endDate: "August 2024",
+    description:
+      "Expert en technologies de l'information (RNCP17286) - Equivalent to Master's in Information Technology.",
+  },
+];
+
 export default function Resume() {
   const resumeRef = useRef<HTMLDivElement>(null);
 
@@ -113,7 +124,7 @@ export default function Resume() {
         </div>
 
         <div className="flex flex-col gap-6 rounded-lg bg-yellow-200/10 p-6">
-          <h2 className="font-oxanium text-3xl text-yellow-200">Resume</h2>
+          <h2 className="font-oxanium text-3xl text-yellow-200">Experience</h2>
           <div className="flex flex-col gap-8">
             {jobs.map((job, index) => (
               <div
@@ -147,6 +158,31 @@ export default function Resume() {
                       </li>
                     ))}
                   </ul>
+                )}
+              </div>
+            ))}
+          </div>
+          <h2 className="font-oxanium text-3xl text-yellow-200">Education</h2>
+          <div className="flex flex-col gap-8">
+            {education.map((edu, index) => (
+              <div
+                key={index}
+                className="rounded-lg bg-white/5 p-4 hover:bg-white/10"
+              >
+                <div className="mb-4">
+                  <h3 className="text-lg font-extrabold text-white">
+                    {edu.title}
+                    {edu.company && (
+                      <span className="text-yellow-200"> · {edu.company}</span>
+                    )}
+                  </h3>
+                  <p className="text-sm text-gray-200">
+                    {edu.startDate} — {edu.endDate}
+                  </p>
+                </div>
+
+                {edu.description && (
+                  <p className="mb-4 text-gray-200">{edu.description}</p>
                 )}
               </div>
             ))}

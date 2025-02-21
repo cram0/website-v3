@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className="font-oxanium p-4 text-center" role="contentinfo">
+    <footer className="p-4 text-center font-mono" role="contentinfo">
       {/* Divider */}
 
       <div className="my-2 border-t border-yellow-200/50" />
