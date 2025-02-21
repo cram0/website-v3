@@ -9,7 +9,7 @@ export default function MainLayout() {
     <>
       <div className="font-lato min-h-dvh bg-black font-light">
         {/* <Background /> */}
-        <div className="flex min-h-dvh flex-col bg-black/50 text-yellow-200 backdrop-blur-xs">
+        <div className="flex min-h-dvh flex-col bg-black/50 text-yellow-200">
           {/* Navbar */}
           <Navbar />
           {/* Container */}
