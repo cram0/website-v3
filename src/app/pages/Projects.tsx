@@ -103,7 +103,7 @@ export default function Projects() {
 
   return (
     <div ref={projectRef}>
-      <div className="col-span-1 flex flex-col gap-6 overflow-hidden rounded-lg bg-yellow-200/10 p-6 sm:col-span-2">
+      <div className="flex flex-col gap-6 rounded-lg bg-yellow-200/10 p-6 backdrop-blur-lg">
         <div className="font-oxanium text-3xl">Projects</div>
 
         <ul ref={projectsRef} className="flex list-inside flex-col gap-2">
