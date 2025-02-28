@@ -62,7 +62,7 @@ export default function Home() {
             <div className="mb-4 flex items-center gap-3">
               <PiHandWaving className="hidden text-yellow-200 sm:block" />
               <img
-                src="https://i.imgur.com/742P20m.jpeg"
+                src="https://i.imgur.com/mqP6iol.jpeg"
                 className="size-8 rounded-full sm:hidden"
                 alt="Me"
               />
