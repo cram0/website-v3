@@ -49,7 +49,11 @@ export default function Navbar() {
             </NavLink>
           ))}
         </ul>
-        <button className="hover:cursor-pointer sm:hidden" onClick={toggleMenu}>
+        <button
+          className="hover:cursor-pointer sm:hidden"
+          aria-label="Toggle menu"
+          onClick={toggleMenu}
+        >
           <IconContext.Provider value={{ color: "fff085", size: "16px" }}>
             {menuOpen ? <MdHive /> : <MdOutlineHive />}
           </IconContext.Provider>

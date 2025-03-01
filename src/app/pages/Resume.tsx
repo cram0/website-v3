@@ -105,7 +105,7 @@ export default function Resume() {
   return (
     <>
       <div className="flex flex-col gap-6" ref={resumeRef}>
-        <div className="flex flex-col gap-6 rounded-lg bg-yellow-200/10 p-6">
+        <div className="flex flex-col gap-6 rounded-lg bg-yellow-200/10 p-6 backdrop-blur-lg">
           <h2 className="font-oxanium text-3xl text-yellow-200">
             PDF Versions
           </h2>
@@ -123,7 +123,7 @@ export default function Resume() {
           </div>
         </div>
 
-        <div className="flex flex-col gap-6 rounded-lg bg-yellow-200/10 p-6">
+        <div className="flex flex-col gap-6 rounded-lg bg-yellow-200/10 p-6 backdrop-blur-lg">
           <h2 className="font-oxanium text-3xl text-yellow-200">Experience</h2>
           <div className="flex flex-col gap-8">
             {jobs.map((job, index) => (
