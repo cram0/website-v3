@@ -2,13 +2,13 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { Outlet } from "react-router";
 
-import Background from "../components/Background";
+// import Background from "../components/Background";
 
 export default function MainLayout() {
   return (
     <>
       <div className="font-lato min-h-dvh bg-black font-light">
-        <Background />
+        {/* <Background /> */}
         <div className="flex min-h-dvh flex-col bg-black/50 text-yellow-200">
           {/* Navbar */}
           <Navbar />
