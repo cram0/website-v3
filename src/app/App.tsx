@@ -5,6 +5,7 @@ import { Route, Routes } from "react-router";
 import Home from "./pages/Home";
 import Projects from "./pages/Projects";
 import Resume from "./pages/Resume";
+import SussyColors from "./pages/SussyColors";
 
 import MainLayout from "./layouts/MainLayout";
 
@@ -16,6 +17,7 @@ function App() {
           <Route index element={<Home />} />
           <Route path="resume" element={<Resume />} />
           <Route path="projects" element={<Projects />} />
+          <Route path="sussy-colors" element={<SussyColors />} />
         </Route>
       </Routes>
     </>
