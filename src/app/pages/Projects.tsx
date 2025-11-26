@@ -1,4 +1,5 @@
 import { useState, useRef } from "react";
+import { Link } from "react-router";
 
 // Icons
 import { TbFidgetSpinner } from "react-icons/tb";
@@ -7,7 +8,15 @@ import { TbFidgetSpinner } from "react-icons/tb";
 import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap";
 
-const projects = [
+type Project = {
+  name: string;
+  description: string;
+  imgUrl: string;
+  projectUrl: string;
+  page?: string;
+};
+
+const projects: Project[] = [
   {
     name: "Tidyhousing",
     description:
@@ -34,6 +43,14 @@ const projects = [
       "https://www.upwork.com/att/download/portfolio/persons/uid/1884608939435636734/profile/projects/files/a4ff1096-f733-45ce-b6cb-2df9da1b5f2d",
     projectUrl:
       "https://www.upwork.com/freelancers/~01ab2f5dbe2efe407b?p=1890506466517671936",
+  },
+  {
+    name: "Sussy Colors",
+    description:
+      "A fun project where I developed a color guessing game using React Native. The game challenges players to identify colors based on their RGB values.",
+    imgUrl: "https://example.com/sussy-colors-image.jpg",
+    projectUrl: "",
+    page: "sussy-colors",
   },
 ];
 
@@ -107,14 +124,9 @@ export default function Projects() {
         <div className="font-oxanium text-3xl">Projects</div>
 
         <ul ref={projectsRef} className="flex list-inside flex-col gap-2">
-          {projects.map((project) => (
-            <li key={project.name}>
-              <a
-                href={project.projectUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-4 rounded-lg p-2 hover:bg-yellow-200/20"
-              >
+          {projects.map((project) => {
+            const content = (
+              <>
                 <div>
                   <ImageWithLoader src={project.imgUrl} alt={project.name} />
                 </div>
@@ -127,9 +139,31 @@ export default function Projects() {
                     {project.description}
                   </p>
                 </div>
-              </a>
-            </li>
-          ))}
+              </>
+            );
+
+            return (
+              <li key={project.name}>
+                {project.page ? (
+                  <Link
+                    to={`/${project.page}`}
+                    className="flex items-center gap-4 rounded-lg p-2 hover:bg-yellow-200/20"
+                  >
+                    {content}
+                  </Link>
+                ) : (
+                  <a
+                    href={project.projectUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-4 rounded-lg p-2 hover:bg-yellow-200/20"
+                  >
+                    {content}
+                  </a>
+                )}
+              </li>
+            );
+          })}
         </ul>
       </div>
     </div>
