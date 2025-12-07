@@ -18,6 +18,10 @@ const menuItems = [
     name: "Resume",
     url: "/resume",
   },
+  {
+    name: "Support",
+    url: "/support",
+  },
 ];
 
 export default function Navbar() {
