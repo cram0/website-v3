@@ -7,6 +7,7 @@ import Projects from "./pages/Projects";
 import Resume from "./pages/Resume";
 import Support from "./pages/Support";
 import SussyColors from "./pages/SussyColors";
+import YoutubeDisableSettings from "./pages/YoutubeDisableSettings";
 
 import MainLayout from "./layouts/MainLayout";
 
@@ -20,6 +21,10 @@ function App() {
           <Route path="projects" element={<Projects />} />
           <Route path="support" element={<Support />} />
           <Route path="sussy-colors" element={<SussyColors />} />
+          <Route
+            path="youtube-disable-settings"
+            element={<YoutubeDisableSettings />}
+          />
         </Route>
       </Routes>
     </>

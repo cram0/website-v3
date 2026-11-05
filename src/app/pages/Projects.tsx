@@ -52,6 +52,14 @@ const projects: Project[] = [
     projectUrl: "",
     page: "sussy-colors",
   },
+  {
+    name: "YouTube Disable Settings",
+    description:
+      "A Chrome extension that automatically turns off Stable volume, Voice boost, Annotations and Ambient mode in the YouTube player.",
+    imgUrl: "/projects/youtube-disable-settings.png",
+    projectUrl: "",
+    page: "youtube-disable-settings",
+  },
 ];
 
 function ImageWithLoader({ src, alt }: { src: string; alt: string }) {
